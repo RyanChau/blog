@@ -1,0 +1,14 @@
+<!--The @article object is available to any partials rendered in the view because we defined it as an instance variable.-->
+<%= form_for([@article, @article.comments.build]) do |f| %>
+    <p>
+      <%= f.label :commenter %><br>
+      <%= f.text_field :commenter %>
+    </p>
+    <p>
+      <%= f.label :body %><br>
+      <%= f.text_area :body %>
+    </p>
+    <p>
+      <%= f.submit %>
+    </p>
+<% end %>
